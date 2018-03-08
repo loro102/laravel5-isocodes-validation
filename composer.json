@@ -1,19 +1,19 @@
 {
-  "name": "pixelpeter/laravel5-isocodes-validation",
-  "description": "Laravel 5 wrapper for the IsoCodes Validation library from ronanguilloux",
+  "name": "loro102/laravel5-isocodes-validation",
+  "description": "Laravel 5 wrapper for the IsoCodes Validation library from ronanguilloux forked pixelpeter",
   "keywords": [
     "laravel",
     "iso",
     "isocode",
     "validation"
   ],
-  "homepage": "https://github.com/pixelpeter/laravel5-isocodes-validation",
+  "homepage": "https://github.com/loro102/laravel5-isocodes-validation",
   "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Peter Haak",
-      "email": "info@pixelpeter.de",
-      "homepage": "https://pixelpeter.de/",
+      "name": "loro102",
+      "email": "loro102@gmail.com",
+      "homepage": "",
       "role": "Developer"
     }
   ],
@@ -23,12 +23,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Pixelpeter\\IsoCodesValidation\\": "src"
+      "loro102\\IsoCodesValidation\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Pixelpeter\\IsoCodesValidation\\Test\\": "tests"
+      "loro102\\IsoCodesValidation\\Test\\": "tests"
     },
     "classmap": [
       "tests/TestCase.php"
