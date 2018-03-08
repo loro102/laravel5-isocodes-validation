@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\IsoCodesValidation;
+namespace loro102\IsoCodesValidation;
 
 
 use Exception;
@@ -47,18 +47,18 @@ class IsoCodesValidator extends BaseValidator
     {
         return $this->runIsoCodesValidator(\IsoCodes\Cif::class, $value);
     }
-	
-	/**
+
+    /**
      * Validate a CIF code
      * Validate a NIF code
-	 *
+     *
      * @param $attribute
      * @param $value
      * @param $parameters
      * @return mixed
      */
-	
-	public function validateCifNif($attribute, $value, $parameters)
+
+    public function validateCiNif($attribute, $value, $parameters)
     {
         if ($this->runIsoCodesValidator(\IsoCodes\Cif::class, $value) ==True){
             return $this->runIsoCodesValidator(\IsoCodes\Cif::class, $value);
@@ -66,8 +66,6 @@ class IsoCodesValidator extends BaseValidator
         if ($this->runIsoCodesValidator(\IsoCodes\Nif::class, $value) ==True){
             return $this->runIsoCodesValidator(\IsoCodes\Nif::class, $value);
         }
-
-
     }
 
     /**
@@ -82,8 +80,6 @@ class IsoCodesValidator extends BaseValidator
     {
         return $this->runIsoCodesValidator(\IsoCodes\CreditCard::class, $value);
     }
-	
-	
 
     /**
      * Validate a EAN-8 code
@@ -614,10 +610,9 @@ class IsoCodesValidator extends BaseValidator
     {
         return $this->valueReplacer($message, $attribute);
     }
-	
-	/**
+    /**
      * Replace all place-holders for the cif rule
-	 * Replace all place-holders for the nif rule
+     * Replace all place-holders for the nif rule
      *
      * @param $message
      * @param $attribute
@@ -625,7 +620,7 @@ class IsoCodesValidator extends BaseValidator
      * @param $parameter
      * @return mixed
      */
-    public function replaceCifNif($message, $attribute, $rule, $parameter)
+    public function replaceCiNif($message, $attribute, $rule, $parameter)
     {
         return $this->valueReplacer($message, $attribute);
     }

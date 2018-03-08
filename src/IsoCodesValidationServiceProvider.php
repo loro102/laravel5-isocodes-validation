@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\IsoCodesValidation;
+namespace loro102\IsoCodesValidation;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +22,7 @@ class IsoCodesValidationServiceProvider extends ServiceProvider
         // registering intervention validator extension
         $this->app['validator']->resolver(function ($translator, $data, $rules, $messages, $customAttributes) {
             // set the validation error messages
-            foreach (get_class_methods('Pixelpeter\IsoCodesValidation\IsoCodesValidator') as $method) {
+            foreach (get_class_methods('loro102\IsoCodesValidation\IsoCodesValidator') as $method) {
                 $key = $this->getTranslationKeyFromMethodName($method);
                 $messages[$key] = $this->getErrorMessage($translator, $messages, $key);
             }
